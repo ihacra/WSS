@@ -6,6 +6,6 @@ package com.hacra.wss.common.utils;
  * @author Hacra
  * @date 2020/05/11
  */
-public class StringUtils extends org.springframework.util.StringUtils {
+public class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 }
