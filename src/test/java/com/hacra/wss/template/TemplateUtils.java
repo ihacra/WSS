@@ -1,4 +1,4 @@
-package com.hacra.wss.test;
+package com.hacra.wss.template;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,7 +137,7 @@ public class TemplateUtils {
 	
 	private static void daoGetNextId() {
 		System.out.printf("\t<select id=\"getNextId\" resultType=\"String\">\r\n" + 
-				"\t\tselect seq+1 from sqlite_sequence where name='%s'\r\n" + 
+				"\t\tSELECT nextval(\"%s\")\r\n" + 
 				"\t</select>\n\n", CN3);
 	}
 }

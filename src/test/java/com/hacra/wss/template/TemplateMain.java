@@ -1,4 +1,4 @@
-package com.hacra.wss.test;
+package com.hacra.wss.template;
 
 /**
  * TmpTest
@@ -6,7 +6,7 @@ package com.hacra.wss.test;
  * @author Hacra
  * @date 2020/05/13
  */
-public class TmpTest {
+public class TemplateMain {
 
 	private static final String CN = "User";	
 	private static final String FS = "private String name;\r\n" + 

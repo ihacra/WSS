@@ -102,7 +102,7 @@
 	</update>
 
 	<select id="getNextId" resultType="String">
-		select seq+1 from sqlite_sequence where name='user'
+		SELECT nextval("sys_user")
 	</select>
 
 </mapper>

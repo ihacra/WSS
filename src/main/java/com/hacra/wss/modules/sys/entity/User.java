@@ -17,7 +17,7 @@ public class User extends BaseCrudEntity<User> {
 	private String name;		
 	/** 登录名 */
 	private String loginName;		
-	/** 密码*/
+	/** 密码 */
 	private String password;		
 	/** 性别 */
 	private String gender;
