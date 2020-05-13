@@ -6,7 +6,7 @@ package com.hacra.wss.common.config;
  * @author Hacra
  * @version 2020/05/12
  */
-public class Global {
+public final class Global {
 
 	/**
 	 * 当前对象实例

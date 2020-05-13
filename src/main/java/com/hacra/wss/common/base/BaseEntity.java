@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.hacra.wss.common.utils.StringUtils;
+import com.hacra.wss.common.util.StringUtils;
 
 /**
  * BaseEntity
@@ -15,30 +15,16 @@ import com.hacra.wss.common.utils.StringUtils;
 public abstract class BaseEntity<T> implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	
-	/**
-	 * 实体编号（唯一标识）
-	 */
+	/** 实体编号（唯一标识） */
 	protected String id;
 	
-	/**
-	 * 是否是新记录（默认：false）
-	 */
-	protected boolean isNewRecord = false;
-	
-	/**
-	 * 自定义SQL（SQL标识，SQL内容）
-	 */
+	/** 自定义SQL（SQL标识，SQL内容） */
 	protected Map<String, String> sqlMap;
 	
-	/**
-	 * 删除标记（0：正常）
-	 */
+	/** 删除标记（0：正常） */
 	public static final String DEL_FLAG_NORMAL = "0";
 	
-	/**
-	 * 删除标记（1：删除）
-	 */
+	/** 删除标记（1：删除） */
 	public static final String DEL_FLAG_DELETE = "1";
 	
 	public BaseEntity() {
@@ -56,14 +42,6 @@ public abstract class BaseEntity<T> implements Serializable{
 
 	public void setId(String id) {
 		this.id = id;
-	}
-
-	public boolean getIsNewRecord() {
-		return isNewRecord || StringUtils.isBlank(getId());
-	}
-
-	public void setNewRecord(boolean isNewRecord) {
-		this.isNewRecord = isNewRecord;
 	}
 	
 	public Map<String, String> getSqlMap() {
