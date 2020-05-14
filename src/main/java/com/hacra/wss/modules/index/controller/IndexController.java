@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.hacra.wss.common.util.SessionUtils;
 import com.hacra.wss.modules.index.service.IndexService;
 import com.hacra.wss.modules.sys.entity.User;
 import com.hacra.wss.modules.sys.service.UserService;
@@ -27,8 +28,9 @@ public class IndexController {
 	
 	@RequestMapping("/")
 	public String index(Model model) {
-		User user = userService.get("1");
-		model.addAttribute("user", user);
+		model.addAttribute("id1", SessionUtils.getLoginUserId());
+		SessionUtils.setLoginUserId("1234");
+		model.addAttribute("id2", SessionUtils.getLoginUserId());
 		return "modules/index/index";
 	}
 }

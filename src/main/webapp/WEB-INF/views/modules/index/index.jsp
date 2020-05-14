@@ -7,21 +7,7 @@
 <body>
 	<h1>SpringBoot</h1>
 	<p>Index</p>
-	${user.id}
-	<br /> ${user.name}
-	<br /> ${user.loginName}
-	<br /> ${user.password}
-	<br /> ${user.gender}
-	<br /> ${user.nation}
-	<br />
-	<fmt:formatDate value="${user.birthdate}" pattern="yyyy-MM-dd" />
-	<br /> ${user.address}
-	<br /> ${user.email}
-	<br /> ${user.mobile}
-	<br /> ${user.perSign}
-	<br />
-	<hr>
-	${user}
-	<br />
+	${id1}
+	<br /> ${id2}
 </body>
 </html>

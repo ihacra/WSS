@@ -24,4 +24,12 @@ public class SessionUtils {
 	public static String getLoginUserId() {
 		return session == null ? null : (String)session.getAttribute(USER_ID);
 	}
+	
+	/**
+	 * 设置当前登录人id
+	 * @param user_id
+	 */
+	public static void setLoginUserId(String userId) {
+		session.setAttribute(USER_ID, userId);
+	}
 }
