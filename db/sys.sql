@@ -2,7 +2,7 @@
 DROP TABLE IF EXISTS `sys_sequence`;
 CREATE TABLE `sys_sequence` (
     `name` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_bin',
-    `current_value` VARCHAR(10) NULL DEFAULT '101' COLLATE 'utf8mb4_bin',
+    `current_value` VARCHAR(10) NULL DEFAULT '100' COLLATE 'utf8mb4_bin',
     PRIMARY KEY (`name`)
 )
 COMMENT='序列表'
@@ -53,6 +53,7 @@ DELIMITER ;
 
 
 -- 创建User表
+DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
     `id` VARCHAR(10) NOT NULL COMMENT '主键' COLLATE 'utf8mb4_bin',
     `name` VARCHAR(50) NULL DEFAULT NULL COMMENT '姓名' COLLATE 'utf8mb4_bin',
@@ -60,8 +61,8 @@ CREATE TABLE `sys_user` (
     `password` VARCHAR(50) NULL DEFAULT NULL COMMENT '密码' COLLATE 'utf8mb4_bin',
     `gender` VARCHAR(10) NULL DEFAULT NULL COMMENT '性别' COLLATE 'utf8mb4_bin',
     `nation` VARCHAR(10) NULL DEFAULT NULL COMMENT '民族' COLLATE 'utf8mb4_bin',
-    `birthdate` VARCHAR(50) NULL DEFAULT NULL COMMENT '出生日期' COLLATE 'utf8mb4_bin',
-    `address` DATETIME NULL DEFAULT NULL COMMENT '居住地址',
+    `birthdate` DATETIME NULL DEFAULT NULL COMMENT '出生日期',
+    `address` VARCHAR(50) NULL DEFAULT NULL COMMENT '居住地址' COLLATE 'utf8mb4_bin',
     `email` VARCHAR(50) NULL DEFAULT NULL COMMENT '电子邮箱' COLLATE 'utf8mb4_bin',
     `mobile` VARCHAR(20) NULL DEFAULT NULL COMMENT '手机号码' COLLATE 'utf8mb4_bin',
     `per_sign` VARCHAR(200) NULL DEFAULT NULL COMMENT '个人签名' COLLATE 'utf8mb4_bin',
@@ -73,4 +74,9 @@ CREATE TABLE `sys_user` (
 )
 COLLATE='utf8mb4_bin'
 ENGINE=InnoDB;
+
+
+-- 系统管理员
+INSERT INTO `wss`.`sys_user` (`id`, `name`, `login_name`, `password`, `gender`, `nation`, `birthdate`, `address`, `email`, `mobile`, `per_sign`, `create_by`, `create_date`, `update_by`, `update_date`, `del_flag`) VALUES ('1', '系统管理员', 'admin', 'admin', '男', '汉族', '2020-05-10 00:00:00', '北京西城区', '2199887379@qq.com', '13263105091', '无', '1', '2020-05-14 08:45:35', '1', '2020-05-14 08:45:41', '0');
+
 

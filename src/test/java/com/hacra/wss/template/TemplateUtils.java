@@ -39,7 +39,7 @@ public class TemplateUtils {
 	public static void daoTemplate() {
 		System.out.printf("<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\r\n" + 
 				"<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\r\n" + 
-				"<mapper namespace=\"com.zgh.amc.modules.%s.dao.%sDao\">\n\n", CN2.endsWith("det") ? CN2.subSequence(0, CN2.length()-3) : CN2, CN);
+				"<mapper namespace=\"com.hacra.wss.modules.%s.dao.%sDao\">\n\n", CN2.endsWith("det") ? CN2.subSequence(0, CN2.length()-3) : CN2, CN);
 		daoSelect();
 		daoGet();
 		daoFindList();
