@@ -50,4 +50,12 @@ public class UserUtils {
 		}
 		return user == null ? new User() : user;
 	}
+	
+	/**
+	 * 获取登录状态
+	 * @return
+	 */
+	public static boolean getLoginStatus() {
+		return StringUtils.isBlank(SessionUtils.getLoginUserId());
+	}
 }
