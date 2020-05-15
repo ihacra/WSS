@@ -1,4 +1,4 @@
-package com.hacra.wss.common.config;
+package com.hacra.wss.common.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
