@@ -1,5 +1,7 @@
 package com.hacra.wss.common.util;
 
+import com.hacra.wss.common.config.SpringContextHolder;
+
 import net.sf.ehcache.Cache;
 import net.sf.ehcache.CacheManager;
 import net.sf.ehcache.Element;
