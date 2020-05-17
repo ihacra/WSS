@@ -18,4 +18,12 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	public static String getDate() {
 		return DateFormatUtils.format(new Date(), "yyyy-MM-dd");
 	}
+	
+	/**
+	 * 获取当前年份
+	 * @return
+	 */
+	public static String getYear() {
+		return DateFormatUtils.format(new Date(), "yyyy");
+	}
 }

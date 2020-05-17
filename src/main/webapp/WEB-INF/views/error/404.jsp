@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>404</title>
-    <link rel="stylesheet" type="text/css" href="${ctx}/static/custom/custom-1.0.0.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/custom/custom-1.0.0.css"/>
     <style type="text/css">
         body {
             background-color: #ECECEC;

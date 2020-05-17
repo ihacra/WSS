@@ -89,7 +89,7 @@ public class TemplateUtils {
 	private static void daoInsert() {
 		System.out.printf("\t<insert id=\"insert\">\n");
 		System.out.printf("\t\tINSERT INTO %s (\n", CN3);
-		System.out.printf("\t\t\t%s\n", "id");
+		System.out.printf("\t\t\t%s\n", "id,");
 		for (int i = 0; i < FIELD.size(); i++) {
 			String[] fs = FIELD.get(i);
 			System.out.printf("\t\t\t%s,\n", fs[2]);

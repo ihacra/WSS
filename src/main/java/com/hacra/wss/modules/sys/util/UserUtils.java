@@ -1,6 +1,6 @@
 package com.hacra.wss.modules.sys.util;
 
-import com.hacra.wss.common.util.CacheUtils;
+import com.hacra.wss.common.util.EhCacheUtils;
 import com.hacra.wss.common.util.DateUtils;
 import com.hacra.wss.common.util.SessionUtils;
 import com.hacra.wss.common.util.SpringContextHolder;
@@ -20,20 +20,38 @@ public class UserUtils {
 
 	public static final String USER_CACHE = "userCache";
 	public static final String USER_CACHE_ID_ = "ID_";
+	public static final String USER_CACHE_LN_ = "LN_";
 	
 	/**
 	 * 根据ID获取用户
 	 * @param id
 	 * @return 取不到返回null
 	 */
-	public static User get(String id){
-		User user = (User)CacheUtils.get(USER_CACHE, USER_CACHE_ID_ + id + "_" + DateUtils.getDate());
+	public static User getUserById(String id){
+		User user = (User)EhCacheUtils.get(USER_CACHE, USER_CACHE_ID_ + id + "_" + DateUtils.getDate());
 		if (user ==  null){
 			user = userDao.get(id);
 			if (user == null){
 				return null;
 			}
-			CacheUtils.put(USER_CACHE, USER_CACHE_ID_ + user.getId() + "_" +DateUtils.getDate(), user);
+			EhCacheUtils.put(USER_CACHE, USER_CACHE_ID_ + user.getId() + "_" +DateUtils.getDate(), user);
+		}
+		return user;
+	}
+	
+	/**
+	 * 根据LoginName获取用户
+	 * @param loginName
+	 * @return 取不到返回null
+	 */
+	public static User getUserByLoginName(String loginName){
+		User user = (User)EhCacheUtils.get(USER_CACHE, USER_CACHE_LN_ + loginName + "_" + DateUtils.getDate());
+		if (user ==  null){
+			user = userDao.get(new User(null, loginName));
+			if (user == null){
+				return null;
+			}
+			EhCacheUtils.put(USER_CACHE, USER_CACHE_LN_ + user.getId() + "_" +DateUtils.getDate(), user);
 		}
 		return user;
 	}
@@ -46,7 +64,7 @@ public class UserUtils {
 		User user = null;
 		String loginUserId = SessionUtils.getLoginUserId();
 		if (StringUtils.isNotBlank(loginUserId)){
-			user = get(loginUserId);
+			user = getUserById(loginUserId);
 		}
 		return user == null ? new User() : user;
 	}

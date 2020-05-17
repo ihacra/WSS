@@ -10,7 +10,7 @@ import net.sf.ehcache.Element;
  * @author Hacra
  * @date 2020/05/13
  */
-public class CacheUtils {
+public class EhCacheUtils {
 
 	private static CacheManager cacheManager = ((CacheManager)SpringContextHolder.getBean(CacheManager.class));
 	

@@ -2,6 +2,7 @@ package com.hacra.wss.modules;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 
 import com.hacra.wss.common.config.WebMvcConfig;
@@ -13,6 +14,7 @@ import com.hacra.wss.common.util.SpringContextHolder;
  * @author Hacra
  * @date 2020/05/11
  */
+@EnableCaching
 @SpringBootApplication
 public class Application {
 

@@ -74,6 +74,8 @@ CREATE TABLE `sys_user` (
 )
 COLLATE='utf8mb4_bin'
 ENGINE=InnoDB;
+-- 添加主键
+ALTER TABLE `sys_user` ADD PRIMARY KEY (`id`, `login_name`);
 
 
 -- 系统管理员

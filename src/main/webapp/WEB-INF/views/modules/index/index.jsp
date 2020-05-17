@@ -4,14 +4,12 @@
 <html>
 <head>
 <%@ include file="/WEB-INF/views/include/head.jsp"%>
-<title>Insert title here</title>
+<title>首页</title>
 </head>
 <body>
 	<%@ include file="/WEB-INF/views/include/top.jsp"%>
-	<h1>SpringBoot</h1>
-	<p>Index</p>
-	${id1}
-	<br /> ${id2}
+    <sys:message content="${message}"></sys:message>
+    asd
 	<%@ include file="/WEB-INF/views/include/bottom.jsp"%>
 </body>
 </html>

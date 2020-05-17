@@ -25,7 +25,14 @@
 		SELECT
 		<include refid="userColumns"/>
 		FROM sys_user a
-		WHERE a.id = #{id}
+		<choose>
+		  <when test="id != null and id != ''">
+		      WHERE a.id = #{id}
+		  </when>
+		  <otherwise>
+		      WHERE a.login_name = #{loginName}
+		  </otherwise>
+		</choose>
 	</select>
 
 	<select id="findList" resultType="User">
@@ -40,7 +47,7 @@
 
 	<insert id="insert">
 		INSERT INTO sys_user (
-			id
+			id,
 			name,
 			login_name,
 			password,

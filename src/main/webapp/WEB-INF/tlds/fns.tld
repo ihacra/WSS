@@ -11,11 +11,21 @@
   <short-name>fns</short-name>
   <uri>http://java.sun.com/jsp/jstl/functionss</uri>
 
+  <!-- UserUtils -->
   <function>
     <description>获取当前登录人</description>
     <name>getUser</name>
     <function-class>com.hacra.wss.modules.sys.util.UserUtils</function-class>
     <function-signature>com.hacra.wss.modules.sys.entity.User getUser()</function-signature>
     <example>${fns:getUser()}</example>
+  </function>
+  
+  <!-- DateUtils -->
+  <function>
+    <description>获取当前年份</description>
+    <name>getYear</name>
+    <function-class>com.hacra.wss.common.util.DateUtils</function-class>
+    <function-signature>java.lang.String getYear()</function-signature>
+    <example>${fns:getYear()}</example>
   </function>
 </taglib>

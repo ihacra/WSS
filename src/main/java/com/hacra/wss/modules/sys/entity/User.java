@@ -41,6 +41,11 @@ public class User extends BaseCrudEntity<User> {
 	public User(String id) {
 		super(id);
 	}
+	
+	public User(String id, String loginName) {
+		super(id);
+		this.loginName = loginName;
+	}
 
 	public String getName() {
 		return name;

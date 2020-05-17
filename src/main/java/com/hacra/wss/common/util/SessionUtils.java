@@ -19,6 +19,7 @@ public class SessionUtils {
 	
 	/**
 	 * 获取当前登录人id
+	 * @param key
 	 * @return
 	 */
 	public static String getLoginUserId() {
@@ -27,9 +28,9 @@ public class SessionUtils {
 	
 	/**
 	 * 设置当前登录人id
-	 * @param user_id
+	 * @param key
 	 */
-	public static void setLoginUserId(String userId) {
-		session.setAttribute(USER_ID, userId);
+	public static void setLoginUserId(String val) {
+		session.setAttribute(USER_ID, val);
 	}
 }
