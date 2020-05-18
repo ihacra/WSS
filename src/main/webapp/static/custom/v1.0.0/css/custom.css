@@ -15,8 +15,8 @@ body {
 /* µÇÂ¼×¢²á */
 
 .login_main {
-	width: 600px;
-	height: 460px;
+	width: 36em;
+	height: 30em;
 	font-size: 1.1em;
 	background: rgba(255,255,255,1);
 	box-shadow: 0 0 10px 0 rgba(194, 185, 213, 0.45);
@@ -42,17 +42,19 @@ body {
 }
 
 .login_img {
-	width: 100px;
-	height: 100px;
+	width: 4.6em;
+	height: 4.6em;
 	margin: 1em auto 1.6em auto;
 }
 
 .login_img img {
 	width: 100%;
 	height: 100%;
+	border-radius: 50%;
 }
 
 .copyright {
+	width: 100%;
 	font-size: 0.8em;
 	font-family: Hebrew;
 	line-height: 3em;
@@ -103,7 +105,15 @@ body {
 .h-menu li {
 	float: left;
 	margin: 0 0.8em;
-    cursor: pointer;
+}
+
+.h-dropdown:after {
+	border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #555555;
+    content: "";
+    position: relative;    
+    width: 0;
 }
 
 .h-img {

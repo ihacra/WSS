@@ -53,15 +53,16 @@
 	                    <input style="width: 100%;" class="btn btn-primary" type="submit" value="登 录" />
 	                </div>
 	                <div class="form-group">
-	                    <div style="color: #CDA3E3; float: left">还没有账号？</div>
-	                    <div style="font-weight: bold; cursor: pointer; float: left" onclick="window.location.href='/login?register'">注册</div>
-	                </div>
+	                	<div style="color: #CDA3E3; float: left">还没有账号？</div>
+		                <div style="font-weight: bold; cursor: pointer; float: left"><a href="/login?register">注册</a></div>
+		            </div>
+	                <div class="form-group">
+					    <div class="copyright" style="float: left">
+					    	Copyright © 2020-${fns:getYear()} 
+					    	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
+					   	</div>
+					</div>
 	            </form>
-		        <br/>
-		        <div class="copyright" style="margin-top: 4em">
-		        	Copyright © 2020-${fns:getYear()} 
-		        	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
-		       	</div>
 	        </c:if>
 	        <c:if test="${pageContext.request.queryString == 'register'}">
                 <script>document.title="用户注册"</script>
@@ -83,14 +84,15 @@
 	                </div>
 	                <div class="form-group">
 	                    <div style="color: #CDA3E3; float: left">已有账号，</div>
-	                    <div style="font-weight: bold; cursor: pointer; float: left" onclick="window.location.href='/login'">登录</div>
+	                    <div style="font-weight: bold; cursor: pointer; float: left"><a href="/login">登录</a></div>
 	                </div>
+	                <div class="form-group">
+					    <div class="copyright" style="float: left">
+					    	Copyright © 2020-${fns:getYear()} 
+					    	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
+					   	</div>
+					</div>
 	            </form>
-		        <br/>
-		        <div class="copyright">
-		        	Copyright © 2020-${fns:getYear()} 
-		        	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
-		       	</div>
 	        </c:if>
         </div>
     </div>

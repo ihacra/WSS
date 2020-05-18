@@ -13,9 +13,15 @@ import org.springframework.web.context.request.ServletRequestAttributes;
  */
 public class SessionUtils {
 
-	private static HttpSession session = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest().getSession();
-	
 	public static final String USER_ID = "uID";
+	
+	/**
+	 * 获取Session
+	 * @return
+	 */
+	private static HttpSession getSession() {
+		return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest().getSession();
+	}
 	
 	/**
 	 * 获取当前登录人id
@@ -23,7 +29,7 @@ public class SessionUtils {
 	 * @return
 	 */
 	public static String getLoginUserId() {
-		return session == null ? null : (String)session.getAttribute(USER_ID);
+		return (String) getSession().getAttribute(USER_ID);
 	}
 	
 	/**
@@ -31,6 +37,6 @@ public class SessionUtils {
 	 * @param key
 	 */
 	public static void setLoginUserId(String val) {
-		session.setAttribute(USER_ID, val);
+		getSession().setAttribute(USER_ID, val);
 	}
 }
