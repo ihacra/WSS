@@ -59,7 +59,6 @@ public class LoginController extends BaseController {
 		switch (flag) {
 		case 0: 
 			addAttribute(redirectAttributes, "user", user);
-			addMessage(redirectAttributes, "登录成功！");
 			return "redirect:/";
 		case 1: 
 			addMessage(redirectAttributes, "用户名错误！");
