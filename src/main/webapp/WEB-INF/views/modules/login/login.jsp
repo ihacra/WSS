@@ -56,12 +56,6 @@
 	                	<div style="color: #CDA3E3; float: left">还没有账号？</div>
 		                <div style="font-weight: bold; cursor: pointer; float: left"><a href="/login?register">注册</a></div>
 		            </div>
-	                <div class="form-group">
-					    <div class="copyright" style="float: left">
-					    	Copyright © 2020-${fns:getYear()} 
-					    	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
-					   	</div>
-					</div>
 	            </form>
 	        </c:if>
 	        <c:if test="${pageContext.request.queryString == 'register'}">
@@ -86,12 +80,6 @@
 	                    <div style="color: #CDA3E3; float: left">已有账号，</div>
 	                    <div style="font-weight: bold; cursor: pointer; float: left"><a href="/login">登录</a></div>
 	                </div>
-	                <div class="form-group">
-					    <div class="copyright" style="float: left">
-					    	Copyright © 2020-${fns:getYear()} 
-					    	<a href="https://github.com/ihacra/WSS" target="_blank">Hacra</a>
-					   	</div>
-					</div>
 	            </form>
 	        </c:if>
         </div>
